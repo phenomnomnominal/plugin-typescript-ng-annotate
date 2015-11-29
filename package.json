@@ -25,7 +25,7 @@
     "name": "phenomnomnominal/plugin-typescript-ng-annotate",
     "dependencies": {
       "ng-annotate": "npm:ng-annotate@1.0.2",
-      "plugin-typescript": "github:plugin-typescript@2.2.3"
+      "plugin-typescript": "github:frankwallis/plugin-typescript@2.2.3"
     },
     "directories": {
       "src": "src"
