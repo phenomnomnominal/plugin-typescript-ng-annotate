@@ -1,8 +1,8 @@
 'use strict';
 
 // Dependencies:
-import ngAnnotate as 'ng-annotate';
-import { translate: translateTS } from 'plugin-typescript';
+import ngAnnotate from 'ng-annotate';
+import { translate as translateTS } from 'plugin-typescript';
 
 export function translate (load) {
 	return translateTS(load)
