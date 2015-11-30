@@ -7,7 +7,11 @@ import { translate as translateTS } from 'plugin-typescript';
 export function translate (load) {
 	return translateTS(load)
 	.then((load) => {
-		let annotate = ngAnnotate(load.source);
+		let annotate = ngAnnotate(load.source, {
+			add: true,
+			remove: true
+		});
+		load.source = annotate.src;
 		return load;
 	});
 }
