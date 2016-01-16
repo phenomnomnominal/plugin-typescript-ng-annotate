@@ -1,11 +1,12 @@
 {
   "name": "plugin-typescript-ng-annotate",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "TypeScript + ng-annotate loader for SystemJS",
-  "author": "Craig Spence",
-  "license": "MIT",
-  "main": "src/plugin.js",
-  "scripts": {},
+  "main": "lib/plugin.js",
+  "homepage": "https://github.com/phenomnomnominal/plugin-typescript-ng-annotate",
+  "authors": [
+	"Craig Spence"
+  ],
   "keywords": [
     "systemjs",
     "jspm",
@@ -14,10 +15,22 @@
     "ng-annotate",
     "angular"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phenomnomnominal/plugin-typescript-ng-annotate.git"
+  },
+  "dependencies": {},
   "devDependencies": {
+    "babel": "6.1.18",
+    "babel-preset-es2015": "6.1.18",
     "ng-annotate": "1.0.2",
     "plugin-typescript": "2.0.3"
   },
+  "scripts": {
+	"build": "babel -d lib /src"
+  },
+  "bin": {},
+  "license": "MIT",
   "jspm": {
     "format": "cjs",
     "main": "plugin",
@@ -28,7 +41,7 @@
       "plugin-typescript": "github:frankwallis/plugin-typescript@^2.0.0"
     },
     "directories": {
-      "src": "src"
+      "lib": "lib"
     }
   }
 }
