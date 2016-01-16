@@ -6,8 +6,8 @@ import { translate as translateTS } from 'plugin-typescript';
 
 export function translate (load) {
 	return translateTS(load)
-	.then((load) => {
-		let annotate = ngAnnotate(load.source, System.ngAnnotateOptions || {
+	.then((compiled) => {
+		let annotate = ngAnnotate(compiled, System.ngAnnotateOptions || {
 			add: true
 		});
 		load.source = annotate.src;
